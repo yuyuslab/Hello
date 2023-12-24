@@ -11,7 +11,7 @@
 <h3>Interests</h3>
 <ul>
   <li>How do people with different backgrounds collaborate to reach a shared goal?</li>
-  <li>For more information on <a href="https://sites.google.com/view/yuyuslab/research" target="blank">YuYu's Lab</a></li>
+  <li>For more information on <a href="https://sites.google.com/view/yuyuslab/home" target="blank">YuYu's Lab</a></li>
 </ul>
 
 <a href="" target="blank"></a>
