@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {% for page in site.pages %}
+          {% if page.url contains 'research' %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        {% assign path_parts = page.url | split: '/' %}
+        {% for part in path_parts %}
+          {% if part != '' %}
+            <li><a href="/{{ part }}">{{ part | capitalize }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <article>
+      {{ content }}
+    </article>
+  </div>
+</body>
+</html>
