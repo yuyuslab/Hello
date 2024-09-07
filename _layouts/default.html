@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Jekyll Site</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS -->
 </head>
-<body>
-  <!-- Sidebar -->
-<!-- Sidebar -->
-<!-- Sidebar -->
-<div class="sidebar">
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-  
-        <!-- First-level directories -->
-        {% assign pages_by_dir = site.pages | group_by: "dir" %}
-        {% for dir in pages_by_dir %}
-          <li>
-            <strong>{{ dir.name | capitalize }}</strong>
-            <ul>
-              <!-- Nested files and subdirectories -->
-              {% for page in dir.items %}
-                {% if page.url contains dir.name %}
-                  <li>
-                    <a href="{{ page.url }}">{{ page.title }}</a>
-  
-                    <!-- Subdirectory Handling -->
-                    {% assign subdir_pages = site.pages | where_exp: "page", "page.url contains page.dir" %}
-                    {% if subdir_pages.size > 0 %}
-                      <ul>
-                        {% for sub_page in subdir_pages %}
-                          <li><a href="{{ sub_page.url }}">{{ sub_page.title }}</a></li>
-                        {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </li>
+<body class="light-mode"> <!-- Set default theme class -->
+
+    <!-- Dark/Light Mode Toggle Button -->
+    <div class="theme-toggle">
+        <img src="path_to_your_image.png" alt="Toggle Theme" id="themeButton">
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- Breadcrumb logic -->
+            {% for crumb in page.url | split: '/' %}
+                {% if crumb != '' %}
+                    <li><a href="{{ site.baseurl }}{{ crumb }}">{{ crumb | capitalize }}</a></li>
                 {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
-  
-  
+            {% endfor %}
+        </ul>
+    </div>
 
-  <!-- Main content -->
-  <div class="main-content">
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb">
-      <ul class="breadcrumb">
-        <li><a href="/">Home</a></li>
-        {% assign path_parts = page.url | split: '/' %}
-        {% for part in path_parts %}
-          {% if part != '' %}
-            <li><a href="/{{ part }}">{{ part | capitalize }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/"><span class="icon">&#127968;</span> Home</a></li> <!-- Home link with icon -->
 
-    <article>
-      {{ content }}
-    </article>
-  </div>
+            <!-- Group pages by their directory using Liquid template -->
+            {% assign pages_by_dir = site.pages | group_by: "dir" %}
+            {% for dir in pages_by_dir %}
+                <li>
+                    <strong><span class="icon">&#128193;</span> {{ dir.name | capitalize }}</strong> <!-- Folder icon -->
+                    <ul>
+                        <!-- Loop through each page in the current directory -->
+                        {% for page in dir.items %}
+                            <li>
+                                <a href="{{ page.url }}"><span class="icon">&#128196;</span> {{ page.title }}</a> <!-- File icon -->
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>{{ page.title }}</h1> <!-- The title of the current page -->
+        <div class="content-body">
+            {{ content }} <!-- This is where the markdown content will be rendered -->
+        </div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
