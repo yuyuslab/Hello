@@ -8,18 +8,45 @@
 </head>
 <body>
   <!-- Sidebar -->
-  <div class="sidebar">
+<!-- Sidebar -->
+<!-- Sidebar -->
+<div class="sidebar">
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        {% for page in site.pages %}
-          {% if page.url contains 'research' %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endif %}
+  
+        <!-- First-level directories -->
+        {% assign pages_by_dir = site.pages | group_by: "dir" %}
+        {% for dir in pages_by_dir %}
+          <li>
+            <strong>{{ dir.name | capitalize }}</strong>
+            <ul>
+              <!-- Nested files and subdirectories -->
+              {% for page in dir.items %}
+                {% if page.url contains dir.name %}
+                  <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+  
+                    <!-- Subdirectory Handling -->
+                    {% assign subdir_pages = site.pages | where_exp: "page", "page.url contains page.dir" %}
+                    {% if subdir_pages.size > 0 %}
+                      <ul>
+                        {% for sub_page in subdir_pages %}
+                          <li><a href="{{ sub_page.url }}">{{ sub_page.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
         {% endfor %}
       </ul>
     </nav>
   </div>
+  
+  
 
   <!-- Main content -->
   <div class="main-content">

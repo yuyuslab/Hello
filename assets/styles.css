@@ -3,12 +3,6 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  .sidebar {
-    width: 200px;
-    background-color: #f5f5f5;
-    padding: 10px;
-  }
-  
   .main-content {
     flex: 1;
     padding: 20px;
@@ -21,5 +15,33 @@ body {
   
   .breadcrumb li {
     margin-right: 5px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar ul ul {
+    padding-left: 15px; /* Indent nested items */
+  }
+  
+  .sidebar li {
+    margin-bottom: 5px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar a:hover {
+    color: #007bff;
   }
   
