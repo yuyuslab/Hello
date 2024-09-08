@@ -3,62 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Jekyll Site</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <title>{{ page.title }}</title>
 </head>
-<body class="light-mode"> <!-- Set default theme class -->
-
-    <!-- Dark/Light Mode Toggle Button -->
-    <div class="theme-toggle">
-        <img src="path_to_your_image.png" alt="Toggle Theme" id="themeButton">
-    </div>
-
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <!-- Breadcrumb logic -->
-            {% for crumb in page.url | split: '/' %}
-                {% if crumb != '' %}
-                    <li><a href="{{ site.baseurl }}{{ crumb }}">{{ crumb | capitalize }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <ul>
-            <li><a href="/"><span class="icon">&#127968;</span> Home</a></li> <!-- Home link with icon -->
-
-            <!-- Group pages by their directory using Liquid template -->
-            {% assign pages_by_dir = site.pages | group_by: "dir" %}
-            {% for dir in pages_by_dir %}
-                <li>
-                    <strong><span class="icon">&#128193;</span> {{ dir.name | capitalize }}</strong> <!-- Folder icon -->
-                    <ul>
-                        <!-- Loop through each page in the current directory -->
-                        {% for page in dir.items %}
-                            <li>
-                                <a href="{{ page.url }}"><span class="icon">&#128196;</span> {{ page.title }}</a> <!-- File icon -->
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <h1>{{ page.title }}</h1> <!-- The title of the current page -->
-        <div class="content-body">
-            {{ content }} <!-- This is where the markdown content will be rendered -->
-        </div>
-    </div>
-
-    <!-- Include JavaScript -->
-    <script src="script.js"></script>
-
+<body>
+    {% include navigation.html %}
+    {{ content }}
 </body>
 </html>
