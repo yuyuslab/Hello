@@ -1,5 +1,6 @@
-encding: utf-8
-repository: yuyuslab/Hello
+theme: jekyll-theme-minimal
+title: yuyuslab home page
+description: repo for yuyuslab work
 collections:
   research:
     output: true
