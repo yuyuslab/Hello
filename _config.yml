@@ -21,5 +21,5 @@ include:
   - _research
   - _about
   - _blog
-baseurl: "https://yuyuslab.github.io"
+baseurl: "https://yuyuslab.github.io/Hello"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
