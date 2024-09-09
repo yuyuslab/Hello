@@ -8,3 +8,7 @@ collections:
     output: true
   blog:
     output: true
+include:
+  - _research
+  - _about
+  - _blog
