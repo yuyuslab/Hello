@@ -15,7 +15,7 @@ title: About
 <h3>Interests</h3>
 *How do people with different background collaborate to reach a shared goal?* <br>
 
-See [Research]({{ site.baseurl }}/research.html/) for more information.
+See [Research]({{ site.baseurl }}/research.html) for more information.
 
 <a href="" target="blank"></a>
 
