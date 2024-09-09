@@ -2,23 +2,20 @@
 layout: default
 title: About
 ---
-
 # Yujiro Kisu (YuYu), he/him
-
 <h3>Profile</h3>
 <ul>
   <li>Student at <a href="https://www.tmu.ac.jp/english/index.html" target="blank">Tokyo Metropolitan University</a></li>
   <li>Studying <a href="https://www.biol.se.tmu.ac.jp/en/" target="blank">biological sciences</a></li>
   <li>Studying <a href="https://www.mq.edu.au/about/about-the-university/our-faculties/medicine-and-health-sciences/departments-and-centres/department-of-cognitive-science" target="blank">cognitive and brain sciences</a></li>
-  <li>Lead of <a href="https://gdsc.community.dev/tokyo-metropolitan-university/" target="blank">Google Developer Student Clubs TMU</a></li>
-  <li>For more information on my <a href="https://docs.google.com/document/d/1c84CdhLZBxSs0L72ABwg8EPhBfut_-VAu4f0xQ_jUy0/edit?usp=sharing" target="blank">CV</a></li>
+  <li>Lead of <a href="https://gdg.community.dev/gdg-on-campus-tokyo-metropolitan-university-tokyo-japan/" target="blank">Google Developer Student Clubs TMU (Now: GDG on Campus TMU)</a></li>
+  <li>For more information (my <a href="https://docs.google.com/document/d/1c84CdhLZBxSs0L72ABwg8EPhBfut_-VAu4f0xQ_jUy0/edit?usp=sharing" target="blank">CV)</a></li>
 </ul> 
 
 <h3>Interests</h3>
-<ul>
-  <li>How do people with different backgrounds collaborate to reach a shared goal?</li>
-  <li>For more information on <a href="https://sites.google.com/view/yuyuslab/home" target="blank">YuYu's Lab</a></li>
-</ul>
+*How do people with different background collaborate to reach a shared goal?* <br>
+
+See [Research]({{ site.baseurl }}/research.html/) for more information.
 
 <a href="" target="blank"></a>
 
