@@ -1,8 +1,8 @@
 - name: Home
-  link: /
+  link: "{{ site.baseurl }}/"
 - name: About
-  link: /about.html
+  link: "{{ site.baseurl }}/about.html"
 - name: Blog
-  link: /blog.html
+  link: "{{ site.baseurl }}/blog.html"
 - name: Research
-  link: /research.html
+  link: "{{ site.baseurl }}/research.html"
