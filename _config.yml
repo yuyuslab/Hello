@@ -1,6 +1,15 @@
 theme: jekyll-theme-minimal
 title: yuyuslab home page
 description: repo for yuyuslab work
+source              : .
+destination         : ./_site
+collections_dir     : .
+plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
+layouts_dir         : _layouts
+data_dir            : _data
+includes_dir        : _includes
+sass:
+  sass_dir: _sass
 collections:
   research:
     output: true
@@ -12,4 +21,5 @@ include:
   - _research
   - _about
   - _blog
-url: "https://yuyuslab.github.io"
+baseurl: "https://yuyuslab.github.io"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
