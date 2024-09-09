@@ -4,6 +4,6 @@ title: Blog
 ---
 # Blog
 {% for post in site.blog %}
-[{% for category in post.category %}{{ category }} / {% endfor%}{{ post.title }}]({{ post.url }})
+[{% for category in post.category %}{{ category }} / {% endfor%}{{ post.title }}]({{ post.url | prepend: site.baseurl }})
 {% endfor %}
 

@@ -4,5 +4,5 @@ title: Research
 ---
 # Research
 {% for post in site.research %}
-[{% for category in post.category %}{{ category }} > {% endfor%}{{ post.title }}]({{ post.url }})
+[{% for category in post.category %}{{ category }} > {% endfor%}{{ post.title }}]({{ post.url | prepend: site.baseurl }})
 {% endfor %}
