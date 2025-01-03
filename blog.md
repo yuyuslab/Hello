@@ -3,6 +3,13 @@ layout: default
 title: Blog
 ---
 
+## Blog
+{% assign sorted_posts = site.blog | sort: 'date' | reverse %}
+{% for post in sorted_posts %}
+- [{{ post.title }} ({{ post.date | date: "%Y-%m-%d" }})]({{ post.url | prepend: site.baseurl }})
+{% endfor %}
+
+
 ## Categories
 <ul>
   {% assign all_categories = "" %}
@@ -18,9 +25,3 @@ title: Blog
     {% endif %}
   {% endfor %}
 </ul>
-
-# Blog
----
-{% for post in site.blog %}
-- [{% for category in post.category %}{{ category }} > {% endfor%}{{ post.title }} ({{ post.date | remove: " 00:00:00 +0000" }})]({{ post.url | prepend: site.baseurl }})
-{% endfor %}

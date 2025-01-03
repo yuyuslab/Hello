@@ -1,5 +1,5 @@
 .current { color: green; }
 
-body { margin: 10%; }
+body { margin: 10%; font-family: Arial, Helvetica, sans-serif; text-decoration: none; }
 
 .circular-panda { width: 50%; height: 50%; display: flex; justify-content: center; margin-top: 5%; }
