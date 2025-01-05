@@ -4,7 +4,7 @@ title: Research
 ---
 
 ## Main research question
-***How do people with different backgrounds collaborate to reach a shared goal?***
+***How do people with different backgrounds achieve a common goal?***
 
 ## Sub inquiries
 - In progress
