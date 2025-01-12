@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
 <script>
@@ -16,21 +17,30 @@
     <title>新潟の佐渡にいる蟻が運ぶ食べ物について</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="/Hello/" >Home</a>
-      
-        <a href="/Hello/about.html" >About</a>
-      
-        <a href="/Hello/blog.html" >Blog</a>
-      
-        <a href="/Hello/research.html" >Research</a>
+            <a href="/Hello/">🐼</a>
+          
+            <a href="/Hello/about.html" >About</a>
+          
+            <a href="/Hello/blog.html" >Blog</a>
+          
+            <a href="/Hello/research.html" >Research</a>
+    
+            <a href="/Hello/links.html" >Useful links</a>
+    
+            <a href="/Hello/musical.html" >Musical</a>
 
-        <a href="/Hello/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="/Hello/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     <h1>新潟の佐渡にいる蟻が運ぶ食べ物について</h1>
 <p>10 Sep 2024</p>
 <p>There are several field work courses at Tokyo Metropolitan University where I study biology. One of them is for going to Sado island, located offshore Niigata prefecture in northern Japan. During the one-week course, students had a few tasks each day each of which we will write a report later. On the last day we were given a chance to have our original experiment by considering the difference in attitude on a mountain (we didn’t have to tho).</p>
@@ -205,5 +215,16 @@ A scenary from data collection site.</p>
 <p>Muscedere, M. L., &amp; Traniello, J. F. (2012). Division of labor in the hyperdiverse ant genus Pheidole is associated with distinct subcaste-and age-related patterns of worker brain organization. PLoS One, 7(2), e31618.</p>
 
 
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>

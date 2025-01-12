@@ -4,25 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% include analytics.html %}
     <title>{{ page.title }}</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="{{ site.baseurl }}/" >Home</a>
-      
-        <a href="{{ site.baseurl }}/about.html" >About</a>
-      
-        <a href="{{ site.baseurl }}/blog.html" >Blog</a>
-      
-        <a href="{{ site.baseurl }}/research.html" >Research</a>
+            <a href="{{ site.baseurl }}/">🐼</a>
+          
+            <a href="{{ site.baseurl }}/about.html" >About</a>
+          
+            <a href="{{ site.baseurl }}/blog.html" >Blog</a>
+          
+            <a href="{{ site.baseurl }}/research.html" >Research</a>
+    
+            <a href="{{ site.baseurl }}/links.html" >Useful links</a>
+    
+            <a href="{{ site.baseurl }}/musical.html" >Musical</a>
 
-        <a href="{{ site.baseurl }}/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="{{ site.baseurl }}/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     {{ content }}
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>

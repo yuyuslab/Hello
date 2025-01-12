@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
 <script>
@@ -16,21 +17,30 @@
     <title>The problem of compromise in Japan: The Unbalanced Compromise in Japanese Electoral System</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="/Hello/" >Home</a>
-      
-        <a href="/Hello/about.html" >About</a>
-      
-        <a href="/Hello/blog.html" >Blog</a>
-      
-        <a href="/Hello/research.html" >Research</a>
+            <a href="/Hello/">🐼</a>
+          
+            <a href="/Hello/about.html" >About</a>
+          
+            <a href="/Hello/blog.html" >Blog</a>
+          
+            <a href="/Hello/research.html" >Research</a>
+    
+            <a href="/Hello/links.html" >Useful links</a>
+    
+            <a href="/Hello/musical.html" >Musical</a>
 
-        <a href="/Hello/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="/Hello/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     <h1>The problem of compromise in Japan: The Unbalanced Compromise in Japanese Electoral System</h1>
 <p>19 Aug 2022</p>
 <p>Compromise exists in our daily lives. For example, two people argue to decide which restaurant they go to, French or Japanese, or politicians make a decision when implementing a law. According to Gutmann and Thompson (2012, p. 30), in a democratic country, compromise is essential because a community without compromise automatically favors the status quo. However, there are advantages and disadvantages of compromise. In order to minimize the disadvantages, a democratic system distributes the share of compromise according to the number of votes so that the more support a representative or political party gets, the larger say it has in a decision-making process. In order words, the majority are likely to compromise less; hence, there would be fewer disadvantages as a whole.</p>
@@ -83,5 +93,16 @@
 <p>The comprehensive Education Center of Shizuoka Prefecture. (n.d.). Shousen kyoku no shikumi [The system of proportional representation method]. Retrieved July 24, 2022, from <a href="https://gakusyu.shizuoka-c.ed.jp/society/chu/citizen/seiji/02_3_nihon_senkyo_seido.htm">https://gakusyu.shizuoka-c.ed.jp/society/chu/citizen/seiji/02_3_nihon_senkyo_seido.htm</a></p>
 
 
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
 <script>
@@ -16,21 +17,30 @@
     <title>本質をついた違和感の問いかもしれないやつ</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="/Hello/" >Home</a>
-      
-        <a href="/Hello/about.html" >About</a>
-      
-        <a href="/Hello/blog.html" >Blog</a>
-      
-        <a href="/Hello/research.html" >Research</a>
+            <a href="/Hello/">🐼</a>
+          
+            <a href="/Hello/about.html" >About</a>
+          
+            <a href="/Hello/blog.html" >Blog</a>
+          
+            <a href="/Hello/research.html" >Research</a>
+    
+            <a href="/Hello/links.html" >Useful links</a>
+    
+            <a href="/Hello/musical.html" >Musical</a>
 
-        <a href="/Hello/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="/Hello/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     <h1>本質をついた違和感の問いかもしれないやつ</h1>
 <p>21 Jun 2024</p>
 <p>I have been reading a book called 問いの立て方 (<a href="https://www.amazon.co.jp/%E5%95%8F%E3%81%84%E3%81%AE%E7%AB%8B%E3%81%A6%E6%96%B9-%E3%81%A1%E3%81%8F%E3%81%BE%E6%96%B0%E6%9B%B8-%E5%AE%AE%E9%87%8E-%E5%85%AC%E6%A8%B9/dp/4480073701">https://www.amazon.co.jp/問いの立て方-ちくま新書-宮野-公樹/dp/4480073701</a>). This book constantly tries not to tell me how to construct a critical question but exists with me to experience the process for that.</p>
@@ -62,5 +72,16 @@
 <p>方向性としては、つまり、私の違和感が解消されることがまず大事。違和感が解消されればまた他の違和感に気づきやすくなっていくかもしれない。今のところ、自分が素直に実験とかを進められない理由がその違和感だから。違和感を解消することがその先にいかに効率的・効果的にいくためかを教えてくれるんじゃないかと思っておる。</p>
 
 
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>

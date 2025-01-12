@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
 <script>
@@ -16,25 +17,45 @@
     <title>YuYu's Lab Wiki for Consilience</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="/Hello/" >Home</a>
-      
-        <a href="/Hello/about.html" >About</a>
-      
-        <a href="/Hello/blog.html" >Blog</a>
-      
-        <a href="/Hello/research.html" >Research</a>
+            <a href="/Hello/">🐼</a>
+          
+            <a href="/Hello/about.html" >About</a>
+          
+            <a href="/Hello/blog.html" >Blog</a>
+          
+            <a href="/Hello/research.html" >Research</a>
+    
+            <a href="/Hello/links.html" >Useful links</a>
+    
+            <a href="/Hello/musical.html" >Musical</a>
 
-        <a href="/Hello/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="/Hello/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     <h1>YuYu's Lab Wiki for Consilience</h1>
 <p>21 Jul 2023</p>
 <p><strong><a href="https://yuyuslab-wiki.notion.site/YuYu-s-Lab-wiki-alone-a24d478d4ad94d5a8184a95ecdf8a56f">YuYu made this wiki</a> to organise thoughts and experience in public, so that it might be of help in the future 🐼</strong></p>
 
 
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>
