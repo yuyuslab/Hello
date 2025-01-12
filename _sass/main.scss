@@ -10,7 +10,7 @@ body {
 }
 
 .body-container {
-  margin: 10%;
+  margin: 5% 10%;
 }
 
 .circular-panda {
@@ -23,15 +23,22 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #FCE1FF;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
+  transition: background-color 0.3s; // Add transition for smooth effect
+}
+
+.topnav.transparent {
+  background-color: transparent;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #156082;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -40,12 +47,7 @@ body {
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  color: #156082;
 }
 
 .topnav .icon {
@@ -57,7 +59,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
   .topnav a:not(:first-child) {
@@ -76,12 +79,17 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: sticky;
+    top: 0;
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
