@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
 <script>
@@ -16,21 +17,30 @@
     <title>Demonstrating “bounded habitats of knowledge” using sudoku problem measured by N2pc signal.</title>
 </head>
 <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
+        <nav>
     
-        <a href="/Hello/" >Home</a>
-      
-        <a href="/Hello/about.html" >About</a>
-      
-        <a href="/Hello/blog.html" >Blog</a>
-      
-        <a href="/Hello/research.html" >Research</a>
+            <a href="/Hello/">🐼</a>
+          
+            <a href="/Hello/about.html" >About</a>
+          
+            <a href="/Hello/blog.html" >Blog</a>
+          
+            <a href="/Hello/research.html" >Research</a>
+    
+            <a href="/Hello/links.html" >Useful links</a>
+    
+            <a href="/Hello/musical.html" >Musical</a>
 
-        <a href="/Hello/links.html" >Useful links</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          
+      </nav>
 
-        <a href="/Hello/musical.html" >Musical</a>
-      
-  </nav>
+    </div>
+
+  <div class="body-container">
     <h1>Demonstrating “bounded habitats of knowledge” using sudoku problem measured by N2pc signal.</h1>
 <p>05 Nov 2023</p>
 <p>This study aims to demonstrate “bounded habitats of knowledge” (MacLeod, 2018). My previously registered study tests whether asymmetry retrieval of semantic and episodic memory in problem-solving tasks can be modelled using ACT-R. It allows for a more realistic model of human problem-solving cognition thus it tells us the problem-solving process, including memory retrieval. In the process of retrieving heuristics, the model (Wang et al., 2009) uses the ideal valid information to make the most uncomplicated problem-solving process. Assuming this valid information, they created a model so that irrelevant information is not recalled because “human being always attends and selects useful information actively in heuristic strategy (Wang et al., 2009).”</p>
@@ -65,5 +75,16 @@
 <p>Wang, R., Xiang, J., Zhou, H., Qin, Y., &amp; Zhong, N. (2009). Simulating Human Heuristic Problem Solving: A Study by Combining ACT-R and fMRI Brain Image. In N. Zhong, K. Li, S. Lu, &amp; L. Chen (Eds.), Brain Informatics (Vol. 5819, pp. 53–62). Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-642-04954-5_16">https://doi.org/10.1007/978-3-642-04954-5_16</a></p>
 
 
+  </div>  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>
