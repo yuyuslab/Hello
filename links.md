@@ -23,3 +23,7 @@ title: Links
 
 ## Psychology/Cognitive science
 
+## Pedagogy
+- [学習指導案作成テンプレート]()
+- [学習指導要領](https://www.mext.go.jp/a_menu/shotou/new-cs/1384661.htm)
+
