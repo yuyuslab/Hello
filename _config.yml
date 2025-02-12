@@ -21,5 +21,6 @@ include:
   - _research
   - _about
   - _blog
+  - _links
 baseurl: "/Hello" # "https://yuyuslab.github.io/Hello" for deployment
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
