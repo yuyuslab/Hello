@@ -8,7 +8,7 @@ title: About
   <li>Student at <a href="https://www.tmu.ac.jp/english/index.html" target="blank">Tokyo Metropolitan University</a></li>
   <li>Studying <a href="https://www.biol.se.tmu.ac.jp/en/" target="blank">biological sciences</a></li>
   <li>Studying <a href="https://www.mq.edu.au/about/about-the-university/our-faculties/medicine-and-health-sciences/departments-and-centres/department-of-cognitive-science" target="blank">cognitive and brain sciences</a></li>
-  <li>Lead of <a href="https://gdg.community.dev/gdg-on-campus-tokyo-metropolitan-university-tokyo-japan/" target="blank">Google Developer Student Clubs TMU (Now: GDG on Campus TMU)</a></li>
+  <li>A supporter aka ex-lead of <a href="https://gdg.community.dev/gdg-on-campus-tokyo-metropolitan-university-tokyo-japan/" target="blank">Google Developer Student Clubs TMU (Now: GDG on Campus TMU)</a></li>
   <li>For more information (my <a href="https://docs.google.com/document/d/1c84CdhLZBxSs0L72ABwg8EPhBfut_-VAu4f0xQ_jUy0/edit?usp=sharing" target="blank">CV)</a></li>
 </ul> 
 
