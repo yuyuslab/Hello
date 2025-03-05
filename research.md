@@ -2,14 +2,7 @@
 layout: default
 title: Research
 ---
-<!-- ## What I am interested in (ver. 2/14/2025)
-### Ultimately it is to know how humans and non-humans are different in terms of their ways to form their societies. This also implies the boundaries between natural science and humanities. 
-
-#### When that sounds too big too digest, it is more down to earth to say that I am interested in knowing how animals create their societies.
-
-##### It can be further reduced into knowing how groups of animals make decisions based on individuals' decisions aka animal collective behaviour.
-
-###### Concretely,  -->
+# Trying to see how knowledges are united
 
 ---
 
