@@ -13,12 +13,17 @@ body {
   margin: 5% 10%;
 }
 
-.circular-panda {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
+.panda-cloud {
+  position: relative;
+  display: inline-block;
+}
+
+.panda-overlay {
+  position: absolute;
+  top: 55%;       /* Move down to the 'fat' part of the cloud */
+  left: 50%;      /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering alignment */
+  font-size: 0.8em; /* Scale panda relative to the cloud */
 }
 
 .topnav {
