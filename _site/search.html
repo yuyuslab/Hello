@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Hello/assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/85848f69e6.js" crossorigin="anonymous"></script>
+    <script src="/Hello/assets/js/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJ4C25NLV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8EJ4C25NLV');
+</script>
+    <title>Word Context Search</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <nav>
+    
+            <a href="/Hello/">
+              <div class="panda-cloud">
+                <i class="fa-solid fa-cloud fa-2xl"></i>
+                <span class="panda-overlay">🐼</span>
+              </div>
+            </a>
+          
+            <a href="/Hello/about.html" ><i class="fa-solid fa-user fa-2xl"></i></a>
+          
+            <a href="/Hello/blog.html" ><i class="fa-solid fa-comment fa-2xl"></i></a>
+            
+            <a href="/Hello/research.html" ><i class="fa-solid fa-brain fa-2xl"></i></a>
+
+            <a href="/Hello/links.html" ><i class="fa-solid fa-link fa-2xl"></i></a>
+    
+            <a href="/Hello/musical.html" ><i class="fa-solid fa-headphones fa-2xl"></i></a>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+
+          
+      </nav>
+
+    </div>
+
+  <div class="body-container">
+    <div id="results-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+  <h1>Context for: <span id="search-term" style="color: #d63031;">...</span></h1>
+  <div id="loading">Loading corpus data...</div>
+  <ul id="sentence-list" style="list-style: none; padding: 0;"></ul>
+</div>
+
+<style>
+  .sentence-card {
+    background: #fff;
+    border-left: 4px solid #0984e3;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 0 4px 4px 0;
+    line-height: 1.6;
+    color: #2d3436;
+  }
+  
+  mark {
+    background-color: #ffeaa7;
+    color: #d63031;
+    font-weight: bold;
+    padding: 0 2px;
+  }
+
+  /* Style for the "Read Full Post" link */
+  .read-more {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+  }
+  .read-more:hover { text-decoration: underline; }
+</style>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const targetWord = urlParams.get('q');
+  
+  if (targetWord) {
+    document.getElementById('search-term').innerText = targetWord;
+    fetchAndProcess();
+  } else {
+    document.getElementById('loading').innerText = "No word selected.";
+  }
+
+  function fetchAndProcess() {
+    fetch("/Hello/assets/js/corpus.json")
+      .then(response => response.json())
+      .then(posts => {
+        // 'posts' is now an Array of Objects: [{title, url, content}, ...]
+        const listContainer = document.getElementById('sentence-list');
+        document.getElementById('loading').style.display = 'none';
+        
+        let matchCount = 0;
+        const lowerWord = targetWord.toLowerCase();
+        const regex = new RegExp(`\\b${lowerWord}\\b`, 'i');
+        const highlightRegex = new RegExp(`(${lowerWord})`, 'gi');
+
+        // Loop through each POST individually
+        posts.forEach(post => {
+          // Split THIS post's content into sentences
+          const sentences = post.content.match(/[^\.!\?]+[\.!\?]+/g);
+          
+          if (!sentences) return;
+
+          sentences.forEach(sentence => {
+            if (regex.test(sentence.toLowerCase())) {
+              matchCount++;
+              
+              const li = document.createElement('li');
+              li.className = 'sentence-card';
+
+              // Highlight the word
+              const highlightedText = sentence.replace(highlightRegex, "<mark>$1</mark>");
+              
+              // Append the text AND the link using the post's data
+              li.innerHTML = `
+                ${highlightedText}
+                <a href="${post.url}" class="read-more">Read "${post.title}" &rarr;</a>
+              `;
+              
+              listContainer.appendChild(li);
+            }
+          });
+        });
+
+        if (matchCount === 0) {
+          listContainer.innerHTML = "<li class='sentence-card'>No exact matches found.</li>";
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('loading').innerText = "Error loading data.";
+      });
+  }
+  
+  function goBack() {
+    if (document.referrer.indexOf(window.location.host) !== -1) {
+      history.back();
+    } else {
+      window.location.href = "/Hello/"; 
+    }
+  }
+</script>
+
+
+  </div> 
+</body>
+</html>

@@ -1,0 +1,10 @@
+---
+layout: default
+title: Debug
+---
+Post Count: {{ site.posts | size }}
+Page Count: {{ site.pages | size }}
+
+List of Posts:
+{% for p in site.posts %}- {{ p.title }} ({{ p.path }})
+{% endfor %}
